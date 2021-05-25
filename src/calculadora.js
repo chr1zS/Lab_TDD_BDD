@@ -1,5 +1,5 @@
 const suma = (a,b) => {
-	
+	return a+b;
 }
 
 //Prueba de la función suma
