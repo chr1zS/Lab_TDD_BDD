@@ -3,7 +3,7 @@ const suma = (a,b) => {
 }
 
 //Prueba de la función suma
-consr prueba_suma = () => {
+const prueba_suma = () => {
 	//Probar que 2 +5 devuelve 7
 	//arrange
 	const a = 2;
