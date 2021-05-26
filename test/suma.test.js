@@ -1,12 +1,12 @@
-const { test } = require("@jest/globals");
+const { test, expect } = require("@jest/globals");
 const suma = require("../modules/suma");
 
 
-test("La suma de 2 y 5 devuelve 7", () => {
+test("La suma de 11 y 35 devuelve 46", () => {
     //arrange
-    const a = 2;
-    const b = 5;
-    const esperado = 7;
+    const a = 11;
+    const b = 35;
+    const esperado = 46;
     //act
     const resultado = suma(a,b);
     //assert
@@ -14,11 +14,11 @@ test("La suma de 2 y 5 devuelve 7", () => {
 
 })
 
-test("La suma de -2 y 4 devuelve 2", () => {
+test("La suma de -23 y 4 devuelve -19", () => {
     //arrange
-    const a = -2;
+    const a = -23;
     const b = 4;
-    const esperado = 2;
+    const esperado = -19;
     //act
     const resultado = suma(a,b);
     //assert
