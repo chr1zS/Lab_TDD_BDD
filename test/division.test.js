@@ -1,4 +1,5 @@
 const { test, expect } = require("@jest/globals");
+const { ERROR } = require("jest-validate/build/utils");
 
 
 
@@ -14,11 +15,23 @@ test("La división de 125 y 5 devuelve 25", () => {
 
 })
 
-test("La división de 24 y  devuelve 5", () => {
+test("La división de 24 y 5 devuelve 5", () => {
     //arrange
     const a = 24;
     const b = 5;
     const esperado = 4.8;
+    //act
+    const resultado = 
+    //assert
+    expect(resultado).toBe(esperado);
+
+})
+
+test("La división de 120 y 0 devuelve 5", () => {
+    //arrange
+    const a = 120;
+    const b = 0;
+    const esperado = ERROR;
     //act
     const resultado = 
     //assert
