@@ -19,5 +19,8 @@
   "homepage": "https://github.com/chr1zS/Lab_TDD_BDD#readme",
   "dependencies": {
     "jest": "^27.0.1"
+  },
+  "directories": {
+    "test": "test"
   }
 }
