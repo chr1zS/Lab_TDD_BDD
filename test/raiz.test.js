@@ -14,23 +14,24 @@ test("La raíz de 49 devuelve 7", () => {
     //assert
     const tolerancia = 0.001;
     const error_cometido = resta (resultado, esperado);
-    expect(resultado).toBe(esperado);
+    expect(resultado).toBeCloseTo(esperado);
     expect(error_cometido).toBeLessThan(tolerancia);
 
 })
 
-test("La raíz de -85 devuelve 0", () => {
+test("La raíz de -85 devuelve ERROR", () => {
     //arrange
-    const a = 85;
+    const a = -85;
     const esperado = ERROR;
     //act
     const resultado = raiz_cuad(a);
     //assert
-    const tolerancia = 0.001;
-    const error_cometido = resta (resultado, esperado);
+    if (esperado != ERROR){
+        const tolerancia = 0.001;
+        const error_cometido = resta (resultado, esperado);
+        expect(error_cometido).toBeLessThan(tolerancia);
+    }
     expect(resultado).toBe(esperado);
-    expect(error_cometido).toBeLessThan(tolerancia);
-
 })
 
 test("La raíz de 24 devuelve 4.898979485", () => {
@@ -42,7 +43,7 @@ test("La raíz de 24 devuelve 4.898979485", () => {
     //assert
     const tolerancia = 0.001;
     const error_cometido = resta (resultado, esperado);
-    expect(resultado).toBe(esperado);
+    expect(resultado).toBeCloseTo(esperado);
     expect(error_cometido).toBeLessThan(tolerancia);
 
 })
@@ -56,7 +57,7 @@ test("La raíz de 0 devuelve 0", () => {
     //assert
     const tolerancia = 0.001;
     const error_cometido = resta (resultado, esperado);
-    expect(resultado).toBe(esperado);
+    expect(resultado).toBeCloseTo(esperado);
     expect(error_cometido).toBeLessThan(tolerancia);
 
 })

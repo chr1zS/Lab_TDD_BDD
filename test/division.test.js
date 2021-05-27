@@ -28,7 +28,7 @@ test("La división de 24 y 5 devuelve 5", () => {
 
 })
 
-test("La división de 120 y 0 devuelve 5", () => {
+test("La división de 120 y 0 devuelve ERROR", () => {
     //arrange
     const a = 120;
     const b = 0;
