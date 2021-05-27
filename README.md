@@ -236,7 +236,7 @@ test("La raíz de 0 devuelve 0", () => {
 
 #### 2.6.1 Primera Ejecución
 
-Implementado solo el módulo suma:
+Implementado solo el método suma:
 
 ```javascript
 $ npm run test
@@ -405,8 +405,6 @@ Ran all test suites.
 
 Todos los métodos implementados pero con fallos en los tests de multiplicación y la raíz cuadrada:
 
-
-
 ```javascript
 $ npm run test
 
@@ -469,66 +467,61 @@ Ran all test suites.
 
 
 
-
-
-
-
-
-
 #### 2.6.3 Tercera Ejecución
 
-Todos los métodos implementados pero con fallos en el test de la raíz cuadrada:
+Fallos en el test de la raíz cuadrada:
 
-<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #d0d0d0">$</span> <span style="color: #d0d0d0">npm</span> <span style="color: #d0d0d0">run</span> <span style="color: #d0d0d0">test</span>
+```javascript
+$ npm run test
 
-<span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">lab_tdd_bdd</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #3677a9">1.0</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">0</span> <span style="color: #d0d0d0">test</span>
-<span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">jest</span>
+> lab_tdd_bdd@1.0.0 test
+> jest
 
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/division.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/resta.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/multiplicacion.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/suma.test.js</span>
- <span style="color: #d0d0d0">FAIL</span>  <span style="color: #d0d0d0">test/raiz.test.js</span>
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">ra</span><span style="color: #a61717; background-color: #e3d2d2">í</span><span style="color: #d0d0d0">z</span> <span style="color: #d0d0d0">de</span> <span style="color: #d0d0d0">-</span><span style="color: #3677a9">85</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">0</span>
+ PASS  test/division.test.js
+ PASS  test/resta.test.js
+ PASS  test/multiplicacion.test.js
+ PASS  test/suma.test.js
+ FAIL  test/raiz.test.js
+  ● La raíz de -85 devuelve 0
 
-    <span style="color: #d0d0d0">expect(received).toBe(expected)</span> <span style="color: #999999; font-style: italic">// Object.is equality</span>
-    
-    <span style="color: #d0d0d0">Expected:</span> <span style="color: #ed9d13">&quot;● Validation Error&quot;</span>
-    <span style="color: #d0d0d0">Received:</span> <span style="color: #3677a9">9.219544457292887</span>
-    
-      <span style="color: #3677a9">29</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">tolerancia</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0.001</span><span style="color: #d0d0d0">;</span>
-      <span style="color: #3677a9">30</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">error_cometido</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">resta</span> <span style="color: #d0d0d0">(resultado,</span> <span style="color: #d0d0d0">esperado);</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">31</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>                       <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">32</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(error_cometido).toBeLessThan(tolerancia);</span>
-      <span style="color: #3677a9">33</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">34</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/raiz.test.js:</span><span style="color: #3677a9">31</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">23</span><span style="color: #d0d0d0">)</span>
+    expect(received).toBe(expected) // Object.is equality
 
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">ra</span><span style="color: #a61717; background-color: #e3d2d2">í</span><span style="color: #d0d0d0">z</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">24</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">4.898979485</span>
+    Expected: "● Validation Error"
+    Received: 9.219544457292887
 
-    <span style="color: #d0d0d0">expect(received).toBe(expected)</span> <span style="color: #999999; font-style: italic">// Object.is equality</span>
-    
-    <span style="color: #d0d0d0">Expected:</span> <span style="color: #3677a9">4.898979485</span>
-    <span style="color: #d0d0d0">Received:</span> <span style="color: #3677a9">4.898979485566356</span>
-    
-      <span style="color: #3677a9">43</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">tolerancia</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0.001</span><span style="color: #d0d0d0">;</span>
-      <span style="color: #3677a9">44</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">error_cometido</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">resta</span> <span style="color: #d0d0d0">(resultado,</span> <span style="color: #d0d0d0">esperado);</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">45</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>                       <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">46</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(error_cometido).toBeLessThan(tolerancia);</span>
-      <span style="color: #3677a9">47</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">48</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/raiz.test.js:</span><span style="color: #3677a9">45</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">23</span><span style="color: #d0d0d0">)</span>
+      29 |     const tolerancia = 0.001;
+      30 |     const error_cometido = resta (resultado, esperado);
+    > 31 |     expect(resultado).toBe(esperado);
+         |                       ^
+      32 |     expect(error_cometido).toBeLessThan(tolerancia);
+      33 |
+      34 | })
 
-<span style="color: #d0d0d0">Test</span> <span style="color: #d0d0d0">Suites:</span> <span style="color: #3677a9">1</span> <span style="color: #d0d0d0">failed,</span> <span style="color: #3677a9">4</span> <span style="color: #d0d0d0">passed,</span> <span style="color: #3677a9">5</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Tests:</span>       <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">failed,</span> <span style="color: #3677a9">11</span> <span style="color: #d0d0d0">passed,</span> <span style="color: #3677a9">13</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Snapshots:</span>   <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Time:</span>        <span style="color: #3677a9">1.73</span> <span style="color: #d0d0d0">s,</span> <span style="color: #d0d0d0">estimated</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">s</span>
-<span style="color: #d0d0d0">Ran</span> <span style="color: #d0d0d0">all</span> <span style="color: #d0d0d0">test</span> <span style="color: #d0d0d0">suites.</span>
-</pre></div>
+      at Object.<anonymous> (test/raiz.test.js:31:23)
+
+  ● La raíz de 24 devuelve 4.898979485
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 4.898979485
+    Received: 4.898979485566356
+
+      43 |     const tolerancia = 0.001;
+      44 |     const error_cometido = resta (resultado, esperado);
+    > 45 |     expect(resultado).toBe(esperado);
+         |                       ^
+      46 |     expect(error_cometido).toBeLessThan(tolerancia);
+      47 |
+      48 | })
+
+      at Object.<anonymous> (test/raiz.test.js:45:23)
+
+Test Suites: 1 failed, 4 passed, 5 total
+Tests:       2 failed, 11 passed, 13 total
+Snapshots:   0 total
+Time:        1.73 s, estimated 2 s
+Ran all test suites.
+```
 
 
 
@@ -536,23 +529,24 @@ Todos los métodos implementados pero con fallos en el test de la raíz cuadrada
 
 Sin fallos en el test:
 
-<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #d0d0d0">$</span> <span style="color: #d0d0d0">npm</span> <span style="color: #d0d0d0">run</span> <span style="color: #d0d0d0">test</span>
+```javascript
+$ npm run test
 
-<span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">lab_tdd_bdd</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #3677a9">1.0</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">0</span> <span style="color: #d0d0d0">test</span>
-<span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">jest</span>
+> lab_tdd_bdd@1.0.0 test
+> jest
 
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/resta.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/multiplicacion.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/division.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/suma.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/raiz.test.js</span>
+ PASS  test/resta.test.js
+ PASS  test/multiplicacion.test.js
+ PASS  test/division.test.js
+ PASS  test/suma.test.js
+ PASS  test/raiz.test.js
 
-<span style="color: #d0d0d0">Test</span> <span style="color: #d0d0d0">Suites:</span> <span style="color: #3677a9">5</span> <span style="color: #d0d0d0">passed,</span> <span style="color: #3677a9">5</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Tests:</span>       <span style="color: #3677a9">13</span> <span style="color: #d0d0d0">passed,</span> <span style="color: #3677a9">13</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Snapshots:</span>   <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Time:</span>        <span style="color: #3677a9">1.533</span> <span style="color: #d0d0d0">s,</span> <span style="color: #d0d0d0">estimated</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">s</span>
-<span style="color: #d0d0d0">Ran</span> <span style="color: #d0d0d0">all</span> <span style="color: #d0d0d0">test</span> <span style="color: #d0d0d0">suites.</span>
-</pre></div>
+Test Suites: 5 passed, 5 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        1.533 s, estimated 2 s
+Ran all test suites.
+```
 
 
 
