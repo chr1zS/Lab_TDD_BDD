@@ -12,217 +12,223 @@ A continuación adjuntamos los codigos usados en las pruebas
 
 ### 2.1 Suma
 
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">test</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">expect</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;@jest/globals&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">const</span> <span style="color: #a6e22e">suma</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;../modules/suma&quot;</span><span style="color: #f8f8f2">);</span>
+```javascript
+const { test, expect } = require("@jest/globals");
+const suma = require("../modules/suma");
 
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La suma de 11 y 35 devuelve 46&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">11</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">35</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">46</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">suma</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
+test("La suma de 11 y 35 devuelve 46", () => {
+    //arrange
+    const a = 11;
+    const b = 35;
+    const esperado = 46;
+    //act
+    const resultado = suma(a,b);
+    //assert
+    expect(resultado).toBe(esperado);
     
-<span style="color: #f8f8f2">})</span>
+})
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La suma de -23 y 4 devuelve -19&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">23</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">19</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">suma</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
+test("La suma de -23 y 4 devuelve -19", () => {
+    //arrange
+    const a = -23;
+    const b = 4;
+    const esperado = -19;
+    //act
+    const resultado = suma(a,b);
+    //assert
+    expect(resultado).toBe(esperado);
 
-<span style="color: #f8f8f2">})</span>
-</pre></div>
+})
+```
 
 
 
 ### 2.2 Resta
 
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">test</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">expect</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;@jest/globals&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">const</span> <span style="color: #a6e22e">suma</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;../modules/suma&quot;</span><span style="color: #f8f8f2">);</span>
-
-
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La suma de 11 y 35 devuelve 46&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">11</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">35</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">46</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">suma</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-    
-<span style="color: #f8f8f2">})</span>
-
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La suma de -23 y 4 devuelve -19&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">23</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">19</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">suma</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-
-<span style="color: #f8f8f2">})</span>
-</pre></div>
+```javascript
+const { test, expect } = require("@jest/globals");
+const resta = require("../modules/resta");
 
 
 
-### 2.3 Multiplicación
+test("La resta de 29 y 8 devuelve 7", () => {
+    //arrange
+    const a = 29;
+    const b = 8;
+    const esperado = 21;
+    //act
+    const resultado = resta (a, b);
+    //assert
+    expect(resultado).toBe(esperado);
 
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">test</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">expect</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;@jest/globals&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">const</span> <span style="color: #a6e22e">multiplicacion</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;../modules/multiplicacion&quot;</span><span style="color: #f8f8f2">);</span>
+})
 
+test("La resta de 32 y 60 devuelve -28", () => {
+    //arrange
+    const a = 32;
+    const b = 60;
+    const esperado = -28;
+    //act
+    const resultado = resta (a, b);
+    //assert
+    expect(resultado).toBe(esperado);
 
-
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La multiplicación de 11 y 3 devuelve 33&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">11</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">33</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">multiplicacion</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-
-<span style="color: #f8f8f2">})</span>
-
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La multiplicación de 1548 y 0 devuelve 0&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1548</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">multiplicacion</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-
-<span style="color: #f8f8f2">})</span>
-</pre></div>
+})
+```
 
 
 
-### 2.4 División
+### 2.4 Multiplicación
 
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">test</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">expect</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;@jest/globals&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">ERROR</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;jest-validate/build/utils&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">const</span> <span style="color: #a6e22e">division</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;../modules/division&quot;</span><span style="color: #f8f8f2">);</span>
+```javascript
+const { test, expect } = require("@jest/globals");
+const multiplicacion = require("../modules/multiplicacion");
 
 
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La división de 125 y 5 devuelve 25&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">125</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">25</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">division</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
+test("La multiplicación de 11 y 3 devuelve 33", () => {
+    //arrange
+    const a = 11;
+    const b = 3;
+    const esperado = 33;
+    //act
+    const resultado = multiplicacion(a, b);
+    //assert
+    expect(resultado).toBe(esperado);
 
-<span style="color: #f8f8f2">})</span>
+})
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La división de 24 y 5 devuelve 5&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">24</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4.8</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">division</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
+test("La multiplicación de 1548 y 0 devuelve 0", () => {
+    //arrange
+    const a = 1548;
+    const b = 0;
+    const esperado = 0;
+    //act
+    const resultado = multiplicacion(a, b);
+    //assert
+    expect(resultado).toBe(esperado);
 
-<span style="color: #f8f8f2">})</span>
+})
+```
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La división de 120 y 0 devuelve ERROR&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">120</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">b</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">ERROR</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">division</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">b</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #f8f8f2">})</span>
-</pre></div>
+
+### 2.5 División
+
+```javascript
+const { test, expect } = require("@jest/globals");
+const { ERROR } = require("jest-validate/build/utils");
+const division = require("../modules/division");
+
+
+
+test("La división de 125 y 5 devuelve 25", () => {
+    //arrange
+    const a = 125;
+    const b = 5;
+    const esperado = 25;
+    //act
+    const resultado = division(a, b);
+    //assert
+    expect(resultado).toBe(esperado);
+
+})
+
+test("La división de 24 y 5 devuelve 5", () => {
+    //arrange
+    const a = 24;
+    const b = 5;
+    const esperado = 4.8;
+    //act
+    const resultado = division(a, b);
+    //assert
+    expect(resultado).toBe(esperado);
+
+})
+
+test("La división de 120 y 0 devuelve ERROR", () => {
+    //arrange
+    const a = 120;
+    const b = 0;
+    const esperado = ERROR;
+    //act
+    const resultado = division(a, b);
+    //assert
+    expect(resultado).toBe(esperado);
+
+})
+```
 
 
 
 ### 2.5 Raíz Cuadrada
 
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">test</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">expect</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;@jest/globals&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">ERROR</span> <span style="color: #f8f8f2">}</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;jest-validate/build/utils&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">const</span> <span style="color: #a6e22e">raiz_cuad</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;../modules/raiz&quot;</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resta</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;../modules/resta&quot;</span><span style="color: #f8f8f2">);</span>
+```javascript
+const { test, expect } = require("@jest/globals");
+const { ERROR } = require("jest-validate/build/utils");
+const raiz_cuad = require("../modules/raiz");
+const resta = require("../modules/resta");
 
 
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La raíz de 49 devuelve 7&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">49</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">raiz_cuad</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">tolerancia</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">error_cometido</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">resta</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBeCloseTo</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">error_cometido</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBeLessThan</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">tolerancia</span><span style="color: #f8f8f2">);</span>
+test("La raíz de 49 devuelve 7", () => {
+    //arrange
+    const a = 49;
+    const esperado = 7;
+    //act
+    const resultado = raiz_cuad(a);
+    //assert
+    const tolerancia = 0.001;
+    const error_cometido = resta (resultado, esperado);
+    expect(resultado).toBeCloseTo(esperado);
+    expect(error_cometido).toBeLessThan(tolerancia);
 
-<span style="color: #f8f8f2">})</span>
+})
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La raíz de -85 devuelve ERROR&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">ERROR</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">raiz_cuad</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span> <span style="color: #f92672">!=</span> <span style="color: #a6e22e">ERROR</span><span style="color: #f8f8f2">){</span>
-        <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">tolerancia</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">;</span>
-        <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">error_cometido</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">resta</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-        <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">error_cometido</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBeLessThan</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">tolerancia</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #f8f8f2">}</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">})</span>
+test("La raíz de -85 devuelve ERROR", () => {
+    //arrange
+    const a = -85;
+    const esperado = ERROR;
+    //act
+    const resultado = raiz_cuad(a);
+    //assert
+    if (esperado != ERROR){
+        const tolerancia = 0.001;
+        const error_cometido = resta (resultado, esperado);
+        expect(error_cometido).toBeLessThan(tolerancia);
+    }
+    expect(resultado).toBe(esperado);
+})
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La raíz de 24 devuelve 4.898979485&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">24</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4.898979485</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">raiz_cuad</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">tolerancia</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">error_cometido</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">resta</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBeCloseTo</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">error_cometido</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBeLessThan</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">tolerancia</span><span style="color: #f8f8f2">);</span>
+test("La raíz de 24 devuelve 4.898979485", () => {
+    //arrange
+    const a = 24;
+    const esperado = 4.898979485;
+    //act
+    const resultado = raiz_cuad(a);
+    //assert
+    const tolerancia = 0.001;
+    const error_cometido = resta (resultado, esperado);
+    expect(resultado).toBeCloseTo(esperado);
+    expect(error_cometido).toBeLessThan(tolerancia);
 
-<span style="color: #f8f8f2">})</span>
+})
 
-<span style="color: #a6e22e">test</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;La raíz de 0 devuelve 0&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span>
-    <span style="color: #75715e">//arrange</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">a</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">esperado</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #75715e">//act</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">resultado</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">raiz_cuad</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">a</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #75715e">//assert</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">tolerancia</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">;</span>
-    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">error_cometido</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">resta</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">resultado</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBeCloseTo</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">esperado</span><span style="color: #f8f8f2">);</span>
-    <span style="color: #a6e22e">expect</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">error_cometido</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">toBeLessThan</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">tolerancia</span><span style="color: #f8f8f2">);</span>
+test("La raíz de 0 devuelve 0", () => {
+    //arrange
+    const a = 0;
+    const esperado = 0;
+    //act
+    const resultado = raiz_cuad(a);
+    //assert
+    const tolerancia = 0.001;
+    const error_cometido = resta (resultado, esperado);
+    expect(resultado).toBeCloseTo(esperado);
+    expect(error_cometido).toBeLessThan(tolerancia);
 
-<span style="color: #f8f8f2">})</span>
-</pre></div>
+})
+```
 
 
 
