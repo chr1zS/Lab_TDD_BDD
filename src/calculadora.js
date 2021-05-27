@@ -1,18 +1,11 @@
-const suma = (a,b) => {
-	return a+b;
-}
+const division = require("../modules/division");
+const multiplicacion = require("../modules/multiplicacion");
+const raiz_cuad = require("../modules/raiz");
+const resta = require("../modules/resta");
+const suma = require("../modules/suma");
 
-//Prueba de la función suma
-const prueba_suma = () => {
-	//Probar que 2 +5 devuelve 7
-	//arrange
-	const a = 2;
-	const b = 5;
-	const esperado = 7;
-	//act
-	const resultado = suma(a,b);
-	//assert
-	console.assert(resultado===esperado, "fallo en la función suma");
-}
-
-prueba_suma()
+module.exports = suma;
+module.exports = resta;
+module.exports = multiplicacion;
+module.exports = division;
+module.exports = raiz_cuad;
