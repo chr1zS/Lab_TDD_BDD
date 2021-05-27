@@ -232,163 +232,166 @@ A continuación adjuntamos los codigos usados en las pruebas
 
 Implementado solo el módulo suma:
 
-<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #d0d0d0">$</span> <span style="color: #d0d0d0">npm</span> <span style="color: #d0d0d0">run</span> <span style="color: #d0d0d0">test</span>
+```javascript
+$ npm run test
 
-<span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">lab_tdd_bdd</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #3677a9">1.0</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">0</span> <span style="color: #d0d0d0">test</span>
-<span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">jest</span>
+> lab_tdd_bdd@1.0.0 test
+> jest
 
- <span style="color: #d0d0d0">FAIL</span>  <span style="color: #d0d0d0">test/resta.test.js</span>
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">resta</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">29</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">8</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">7</span>
+ FAIL  test/resta.test.js
+  ● La resta de 29 y 8 devuelve 7
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">11</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">12</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">13</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">14</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">15</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">16</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/resta.test.js:</span><span style="color: #3677a9">13</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
+    ReferenceError: Cannot access 'resultado' before initialization
 
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">resta</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">32</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">60</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #d0d0d0">-</span><span style="color: #3677a9">28</span>
+      11 |     const resultado =
+      12 |     //assert
+    > 13 |     expect(resultado).toBe(esperado);
+         |            ^
+      14 |
+      15 | })
+      16 |
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">23</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">24</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">25</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">26</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">27</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">28</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/resta.test.js:</span><span style="color: #3677a9">25</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
+      at Object.<anonymous> (test/resta.test.js:13:12)
 
- <span style="color: #d0d0d0">FAIL</span>  <span style="color: #d0d0d0">test/division.test.js</span>
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">divisi</span><span style="color: #a61717; background-color: #e3d2d2">ó</span><span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">125</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">5</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">25</span>
+  ● La resta de 32 y 60 devuelve -28
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">12</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">13</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">14</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">15</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">16</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">17</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/division.test.js:</span><span style="color: #3677a9">14</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">divisi</span><span style="color: #a61717; background-color: #e3d2d2">ó</span><span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">24</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">5</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">5</span>
-    
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">24</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">25</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">26</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">27</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">28</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">29</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/division.test.js:</span><span style="color: #3677a9">26</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
+    ReferenceError: Cannot access 'resultado' before initialization
 
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">divisi</span><span style="color: #a61717; background-color: #e3d2d2">ó</span><span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">120</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">5</span>
+      23 |     const resultado =
+      24 |     //assert
+    > 25 |     expect(resultado).toBe(esperado);
+         |            ^
+      26 |
+      27 | })
+      28 |
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">36</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">37</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">38</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">39</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">40</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">41</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/division.test.js:</span><span style="color: #3677a9">38</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
+      at Object.<anonymous> (test/resta.test.js:25:12)
 
- <span style="color: #d0d0d0">FAIL</span>  <span style="color: #d0d0d0">test/multiplicacion.test.js</span>
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">multiplicaci</span><span style="color: #a61717; background-color: #e3d2d2">ó</span><span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">11</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">3</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">33</span>
+ FAIL  test/division.test.js
+  ● La división de 125 y 5 devuelve 25
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">11</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">12</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">13</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">14</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">15</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">16</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/multiplicacion.test.js:</span><span style="color: #3677a9">13</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
+    ReferenceError: Cannot access 'resultado' before initialization
 
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">multiplicaci</span><span style="color: #a61717; background-color: #e3d2d2">ó</span><span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">1548</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">0</span>
+      12 |     const resultado =
+      13 |     //assert
+    > 14 |     expect(resultado).toBe(esperado);
+         |            ^
+      15 |
+      16 | })
+      17 |
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">23</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">24</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">25</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-       <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">26</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">27</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">28</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/multiplicacion.test.js:</span><span style="color: #3677a9">25</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
+      at Object.<anonymous> (test/division.test.js:14:12)
+      ● La división de 24 y 5 devuelve 5
 
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/suma.test.js</span>
- <span style="color: #d0d0d0">FAIL</span>  <span style="color: #d0d0d0">test/raiz.test.js</span>
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">Test</span> <span style="color: #d0d0d0">suite</span> <span style="color: #d0d0d0">failed</span> <span style="color: #d0d0d0">to</span> <span style="color: #d0d0d0">run</span>
+    ReferenceError: Cannot access 'resultado' before initialization
 
-    <span style="color: #d0d0d0">Jest</span> <span style="color: #d0d0d0">encountered</span> <span style="color: #d0d0d0">an</span> <span style="color: #d0d0d0">unexpected</span> <span style="color: #d0d0d0">token</span>
-    
-    <span style="color: #d0d0d0">Jest</span> <span style="color: #d0d0d0">failed</span> <span style="color: #d0d0d0">to</span> <span style="color: #d0d0d0">parse</span> <span style="color: #d0d0d0">a</span> <span style="color: #d0d0d0">file.</span> <span style="color: #d0d0d0">This</span> <span style="color: #d0d0d0">happens</span> <span style="color: #d0d0d0">e.g.</span> <span style="color: #d0d0d0">when</span> <span style="color: #d0d0d0">your</span> <span style="color: #d0d0d0">code</span> <span style="color: #d0d0d0">or</span> <span style="color: #d0d0d0">its</span> <span style="color: #d0d0d0">dependencies</span> <span style="color: #d0d0d0">use</span> <span style="color: #d0d0d0">non-standard</span> <span style="color: #d0d0d0">JavaScript</span> <span style="color: #d0d0d0">syntax,</span> <span style="color: #d0d0d0">or</span> <span style="color: #d0d0d0">when</span> <span style="color: #d0d0d0">Jest</span> <span style="color: #d0d0d0">is</span> <span style="color: #d0d0d0">not</span> <span style="color: #d0d0d0">configured</span> <span style="color: #d0d0d0">to</span> <span style="color: #d0d0d0">support</span> <span style="color: #d0d0d0">such</span> <span style="color: #d0d0d0">syntax.</span>
-    
-    <span style="color: #d0d0d0">Out</span> <span style="color: #d0d0d0">of</span> <span style="color: #d0d0d0">the</span> <span style="color: #d0d0d0">box</span> <span style="color: #d0d0d0">Jest</span> <span style="color: #d0d0d0">supports</span> <span style="color: #d0d0d0">Babel,</span> <span style="color: #d0d0d0">which</span> <span style="color: #d0d0d0">will</span> <span style="color: #d0d0d0">be</span> <span style="color: #d0d0d0">used</span> <span style="color: #d0d0d0">to</span> <span style="color: #d0d0d0">transform</span> <span style="color: #d0d0d0">your</span> <span style="color: #d0d0d0">files</span> <span style="color: #d0d0d0">into</span> <span style="color: #d0d0d0">valid</span> <span style="color: #d0d0d0">JS</span> <span style="color: #d0d0d0">based</span> <span style="color: #d0d0d0">on</span> <span style="color: #d0d0d0">your</span> <span style="color: #d0d0d0">Babel</span> <span style="color: #d0d0d0">configuration.</span>
-    
-    <span style="color: #d0d0d0">By</span> <span style="color: #6ab825; font-weight: bold">default</span> <span style="color: #ed9d13">&quot;node_modules&quot;</span> <span style="color: #d0d0d0">folder</span> <span style="color: #d0d0d0">is</span> <span style="color: #d0d0d0">ignored</span> <span style="color: #d0d0d0">by</span> <span style="color: #d0d0d0">transformers.</span>
-    
-    <span style="color: #d0d0d0">Here</span><span style="color: #ed9d13">&#39;s what you can do:</span>
-<span style="color: #ed9d13">     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.</span>
-<span style="color: #ed9d13">     • To have some of your &quot;node_modules&quot; files transformed, you can specify a custom &quot;transformIgnorePatterns&quot; in your config.</span>
-<span style="color: #ed9d13">     • If you need a custom transformation specify a &quot;transform&quot; option in your config.</span>
-<span style="color: #ed9d13">     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the &quot;moduleNameMapper&quot; config option.</span>
+      24 |     const resultado =
+      25 |     //assert
+    > 26 |     expect(resultado).toBe(esperado);
+         |            ^
+      27 |
+      28 | })
+      29 |
 
-<span style="color: #ed9d13">    You&#39;</span><span style="color: #d0d0d0">ll</span> <span style="color: #d0d0d0">find</span> <span style="color: #d0d0d0">more</span> <span style="color: #d0d0d0">details</span> <span style="color: #d0d0d0">and</span> <span style="color: #d0d0d0">examples</span> <span style="color: #d0d0d0">of</span> <span style="color: #d0d0d0">these</span> <span style="color: #d0d0d0">config</span> <span style="color: #d0d0d0">options</span> <span style="color: #6ab825; font-weight: bold">in</span> <span style="color: #d0d0d0">the</span> <span style="color: #d0d0d0">docs:</span>
-    <span style="color: #d0d0d0">https:</span><span style="color: #999999; font-style: italic">//jestjs.io/docs/configuration</span>
-    <span style="color: #d0d0d0">For</span> <span style="color: #d0d0d0">information</span> <span style="color: #d0d0d0">about</span> <span style="color: #d0d0d0">custom</span> <span style="color: #d0d0d0">transformations,</span> <span style="color: #d0d0d0">see:</span>
-    <span style="color: #d0d0d0">https:</span><span style="color: #999999; font-style: italic">//jestjs.io/docs/code-transformation</span>
+      at Object.<anonymous> (test/division.test.js:26:12)
 
-    <span style="color: #d0d0d0">Details:</span>
-    
-    <span style="color: #d0d0d0">SyntaxError:</span> <span style="color: #a61717; background-color: #e3d2d2">/Users/Chris/Documents/Lab_TDD_BDD/test/raiz.test.js: &#39;Const declarations&#39; require an initialization value. (33:19)</span>
-    
-      <span style="color: #3677a9">31</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">esperado</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">4.898979485</span><span style="color: #d0d0d0">;</span>
-      <span style="color: #3677a9">32</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//act</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">33</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span>
-         <span style="color: #d0d0d0">|</span>                    <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">34</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-      <span style="color: #3677a9">35</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-      <span style="color: #3677a9">36</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser._raise</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/error.js:</span><span style="color: #3677a9">134</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">45</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.raiseWithData</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/error.js:</span><span style="color: #3677a9">129</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">17</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.raise</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/error.js:</span><span style="color: #3677a9">78</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">17</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.parseVar</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/statement.js:</span><span style="color: #3677a9">1103</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">18</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.parseVarStatement</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/statement.js:</span><span style="color: #3677a9">784</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.parseStatementContent</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/statement.js:</span><span style="color: #3677a9">286</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">21</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.parseStatement</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/statement.js:</span><span style="color: #3677a9">226</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">17</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.parseBlockOrModuleBlockBody</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/statement.js:</span><span style="color: #3677a9">958</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">25</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.parseBlockBody</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/statement.js:</span><span style="color: #3677a9">934</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)</span>
-      <span style="color: #d0d0d0">at</span> <span style="color: #d0d0d0">Parser.parseBlock</span> <span style="color: #d0d0d0">(node_modules/</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #d0d0d0">babel/parser/src/parser/statement.js:</span><span style="color: #3677a9">904</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)</span>
+  ● La división de 120 y 0 devuelve 5
 
-<span style="color: #d0d0d0">Test</span> <span style="color: #d0d0d0">Suites:</span> <span style="color: #3677a9">4</span> <span style="color: #d0d0d0">failed,</span> <span style="color: #3677a9">1</span> <span style="color: #d0d0d0">passed,</span> <span style="color: #3677a9">5</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Tests:</span>       <span style="color: #3677a9">7</span> <span style="color: #d0d0d0">failed,</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">passed,</span> <span style="color: #3677a9">9</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Snapshots:</span>   <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Time:</span>        <span style="color: #3677a9">1.84</span> <span style="color: #d0d0d0">s,</span> <span style="color: #d0d0d0">estimated</span> <span style="color: #3677a9">3</span> <span style="color: #d0d0d0">s</span>
-<span style="color: #d0d0d0">Ran</span> <span style="color: #d0d0d0">all</span> <span style="color: #d0d0d0">test</span> <span style="color: #d0d0d0">suites.</span>
-</pre></div>
+    ReferenceError: Cannot access 'resultado' before initialization
+
+      36 |     const resultado =
+      37 |     //assert
+    > 38 |     expect(resultado).toBe(esperado);
+         |            ^
+      39 |
+      40 | })
+      41 |
+
+      at Object.<anonymous> (test/division.test.js:38:12)
+
+ FAIL  test/multiplicacion.test.js
+  ● La multiplicación de 11 y 3 devuelve 33
+
+    ReferenceError: Cannot access 'resultado' before initialization
+
+      11 |     const resultado =
+      12 |     //assert
+    > 13 |     expect(resultado).toBe(esperado);
+         |            ^
+      14 |
+      15 | })
+      16 |
+
+      at Object.<anonymous> (test/multiplicacion.test.js:13:12)
+
+  ● La multiplicación de 1548 y 0 devuelve 0
+
+    ReferenceError: Cannot access 'resultado' before initialization
+
+      23 |     const resultado =
+      24 |     //assert
+    > 25 |     expect(resultado).toBe(esperado);
+       |            ^
+      26 |
+      27 | })
+      28 |
+
+      at Object.<anonymous> (test/multiplicacion.test.js:25:12)
+
+ PASS  test/suma.test.js
+ FAIL  test/raiz.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+    
+    SyntaxError: /Users/Chris/Documents/Lab_TDD_BDD/test/raiz.test.js: 'Const declarations' require an initialization value. (33:19)
+
+      31 |     const esperado = 4.898979485;
+      32 |     //act
+    > 33 |     const resultado
+         |                    ^
+      34 |     //assert
+      35 |     expect(resultado).toBe(esperado);
+      36 |
+
+      at Parser._raise (node_modules/@babel/parser/src/parser/error.js:134:45)
+      at Parser.raiseWithData (node_modules/@babel/parser/src/parser/error.js:129:17)
+      at Parser.raise (node_modules/@babel/parser/src/parser/error.js:78:17)
+      at Parser.parseVar (node_modules/@babel/parser/src/parser/statement.js:1103:18)
+      at Parser.parseVarStatement (node_modules/@babel/parser/src/parser/statement.js:784:10)
+      at Parser.parseStatementContent (node_modules/@babel/parser/src/parser/statement.js:286:21)
+      at Parser.parseStatement (node_modules/@babel/parser/src/parser/statement.js:226:17)
+      at Parser.parseBlockOrModuleBlockBody (node_modules/@babel/parser/src/parser/statement.js:958:25)
+      at Parser.parseBlockBody (node_modules/@babel/parser/src/parser/statement.js:934:10)
+      at Parser.parseBlock (node_modules/@babel/parser/src/parser/statement.js:904:10)
+
+Test Suites: 4 failed, 1 passed, 5 total
+Tests:       7 failed, 2 passed, 9 total
+Snapshots:   0 total
+Time:        1.84 s, estimated 3 s
+Ran all test suites.
+```
+
+
 
 
 
@@ -396,64 +399,73 @@ Implementado solo el módulo suma:
 
 Todos los métodos implementados pero con fallos en los tests de multiplicación y la raíz cuadrada:
 
-<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #d0d0d0">$</span> <span style="color: #d0d0d0">npm</span> <span style="color: #d0d0d0">run</span> <span style="color: #d0d0d0">test</span>
 
-<span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">lab_tdd_bdd</span><span style="color: #a61717; background-color: #e3d2d2">@</span><span style="color: #3677a9">1.0</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">0</span> <span style="color: #d0d0d0">test</span>
-<span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">jest</span>
 
- <span style="color: #d0d0d0">FAIL</span>  <span style="color: #d0d0d0">test/multiplicacion.test.js</span>
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">multiplicaci</span><span style="color: #a61717; background-color: #e3d2d2">ó</span><span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">11</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">3</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">33</span>
+```javascript
+$ npm run test
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">11</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">12</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">13</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">14</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">15</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">16</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/multiplicacion.test.js:</span><span style="color: #3677a9">13</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
+> lab_tdd_bdd@1.0.0 test
+> jest
 
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">multiplicaci</span><span style="color: #a61717; background-color: #e3d2d2">ó</span><span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">de</span> <span style="color: #3677a9">1548</span> <span style="color: #d0d0d0">y</span> <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">devuelve</span> <span style="color: #3677a9">0</span>
+ FAIL  test/multiplicacion.test.js
+  ● La multiplicación de 11 y 3 devuelve 33
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">Cannot</span> <span style="color: #d0d0d0">access</span> <span style="color: #ed9d13">&#39;resultado&#39;</span> <span style="color: #d0d0d0">before</span> <span style="color: #d0d0d0">initialization</span>
-    
-      <span style="color: #3677a9">23</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">resultado</span> <span style="color: #d0d0d0">=</span>
-      <span style="color: #3677a9">24</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//assert</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">25</span> <span style="color: #d0d0d0">|</span>     <span style="color: #d0d0d0">expect(resultado).toBe(esperado);</span>
-         <span style="color: #d0d0d0">|</span>            <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">26</span> <span style="color: #d0d0d0">|</span>
-      <span style="color: #3677a9">27</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">28</span> <span style="color: #d0d0d0">|</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/multiplicacion.test.js:</span><span style="color: #3677a9">25</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">12</span><span style="color: #d0d0d0">)</span>
+    ReferenceError: Cannot access 'resultado' before initialization
 
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/resta.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/division.test.js</span>
- <span style="color: #d0d0d0">PASS</span>  <span style="color: #d0d0d0">test/suma.test.js</span>
- <span style="color: #d0d0d0">FAIL</span>  <span style="color: #d0d0d0">test/raiz.test.js</span>
-  <span style="color: #a61717; background-color: #e3d2d2">●</span> <span style="color: #d0d0d0">Test</span> <span style="color: #d0d0d0">suite</span> <span style="color: #d0d0d0">failed</span> <span style="color: #d0d0d0">to</span> <span style="color: #d0d0d0">run</span>
+      11 |     const resultado =
+      12 |     //assert
+    > 13 |     expect(resultado).toBe(esperado);
+         |            ^
+      14 |
+      15 | })
+      16 |
 
-    <span style="color: #d0d0d0">ReferenceError:</span> <span style="color: #d0d0d0">est</span> <span style="color: #d0d0d0">is</span> <span style="color: #d0d0d0">not</span> <span style="color: #d0d0d0">defined</span>
-    
-      <span style="color: #3677a9">27</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">})</span>
-      <span style="color: #3677a9">28</span> <span style="color: #d0d0d0">|</span>
-    <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">29</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">est(</span><span style="color: #ed9d13">&quot;La raíz de 24 devuelve 4.898979485&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">=&gt;</span> <span style="color: #d0d0d0">{</span>
-         <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">^</span>
-      <span style="color: #3677a9">30</span> <span style="color: #d0d0d0">|</span>     <span style="color: #999999; font-style: italic">//arrange</span>
-      <span style="color: #3677a9">31</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">24</span><span style="color: #d0d0d0">;</span>
-      <span style="color: #3677a9">32</span> <span style="color: #d0d0d0">|</span>     <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">esperado</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">4.898979485</span><span style="color: #d0d0d0">;</span>
-    
-      <span style="color: #d0d0d0">at</span> <span style="color: #24909d">Object</span><span style="color: #d0d0d0">.&lt;anonymous&gt;</span> <span style="color: #d0d0d0">(test/raiz.test.js:</span><span style="color: #3677a9">29</span><span style="color: #d0d0d0">:</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">)</span>
+      at Object.<anonymous> (test/multiplicacion.test.js:13:12)
 
-<span style="color: #d0d0d0">Test</span> <span style="color: #d0d0d0">Suites:</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">failed,</span> <span style="color: #3677a9">3</span> <span style="color: #d0d0d0">passed,</span> <span style="color: #3677a9">5</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Tests:</span>       <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">failed,</span> <span style="color: #3677a9">7</span> <span style="color: #d0d0d0">passed,</span> <span style="color: #3677a9">9</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Snapshots:</span>   <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">total</span>
-<span style="color: #d0d0d0">Time:</span>        <span style="color: #3677a9">1.749</span> <span style="color: #d0d0d0">s,</span> <span style="color: #d0d0d0">estimated</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">s</span>
-<span style="color: #d0d0d0">Ran</span> <span style="color: #d0d0d0">all</span> <span style="color: #d0d0d0">test</span> <span style="color: #d0d0d0">suites.</span>
-</pre></div>
+  ● La multiplicación de 1548 y 0 devuelve 0
+
+    ReferenceError: Cannot access 'resultado' before initialization
+
+      23 |     const resultado =
+      24 |     //assert
+    > 25 |     expect(resultado).toBe(esperado);
+         |            ^
+      26 |
+      27 | })
+      28 |
+
+      at Object.<anonymous> (test/multiplicacion.test.js:25:12)
+
+ PASS  test/resta.test.js
+ PASS  test/division.test.js
+ PASS  test/suma.test.js
+ FAIL  test/raiz.test.js
+  ● Test suite failed to run
+
+    ReferenceError: est is not defined
+
+      27 | })
+      28 |
+    > 29 | est("La raíz de 24 devuelve 4.898979485", () => {
+         | ^
+      30 |     //arrange
+      31 |     const a = 24;
+      32 |     const esperado = 4.898979485;
+
+      at Object.<anonymous> (test/raiz.test.js:29:1)
+
+Test Suites: 2 failed, 3 passed, 5 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        1.749 s, estimated 2 s
+Ran all test suites.
+```
+
+
+
+
+
+
 
 
 
