@@ -3,7 +3,7 @@ const division = require("./division");
 const multiplicacion = require("./multiplicacion");
 const suma = require("./suma");
 
-const raiz = (a) => {
+const raiz_cuad = (a) => {
     if ( a > 0){
         var r = a;
         var t = 0;
@@ -22,4 +22,4 @@ const raiz = (a) => {
     }
 }
 
-module.exports = raiz;
+module.exports = raiz_cuad;
