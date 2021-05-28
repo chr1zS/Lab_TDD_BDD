@@ -1,28 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [1. Introducción](#1-introducci%C3%B3n)
-- [2. Código de Pruebas](#2-c%C3%B3digo-de-pruebas)
-  - [2.1 Suma](#21-suma)
-  - [2.2 Resta](#22-resta)
-  - [2.4 Multiplicación](#24-multiplicaci%C3%B3n)
-  - [2.5 División](#25-divisi%C3%B3n)
-  - [2.5 Raíz Cuadrada](#25-ra%C3%ADz-cuadrada)
-  - [2.6 Rsultados Test](#26-rsultados-test)
-    - [2.6.1 Primera Ejecución](#261-primera-ejecuci%C3%B3n)
-    - [2.6.2 Segunda Ejecución](#262-segunda-ejecuci%C3%B3n)
-    - [2.6.3 Tercera Ejecución](#263-tercera-ejecuci%C3%B3n)
-    - [2.6.4 Cuarta Ejcución](#264-cuarta-ejcuci%C3%B3n)
-- [3. Código de la Aplicación](#3-c%C3%B3digo-de-la-aplicaci%C3%B3n)
-  - [3.1 Suma](#31-suma)
-  - [3.2 Resta](#32-resta)
-  - [3.3 Multiplicación](#33-multiplicaci%C3%B3n)
-  - [3.4 División](#34-divisi%C3%B3n)
-  - [3.5 Raíz Cuadrada](#35-ra%C3%ADz-cuadrada)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 <p align="left">
   <img src="unir.png" style="zoom:10%;" width="80" title="UNIR">
 </p>
