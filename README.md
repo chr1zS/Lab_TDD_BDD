@@ -1,10 +1,67 @@
 <p align="left">
   <img src="unir.png" style="zoom:10%;" width="80" title="UNIR">
 </p>
-
 # Laboratorio: Desarrollo Dirigido Por Pruebas (TDD o BDD)
 
+**Repositorio GitHub: https://github.com/chr1zS/Lab_TDD_BDD**
+
+**Autor: Christian Suárez Heuvan**
+
+[TOC]
+
+
+
 ## 1. Introducción
+
+El objetivo del presente laboratorio consiste en el desarrollo dirigio por pruebas aplicando técnicas TDD o BDD sobre una aplicación.
+
+La aplicación sobre la que realizaremos las pruebas consiste en una calculadora capaz de realizar sumas, restas, multiplicaciónes, divisónes y raices cuadradas, utilizando el [Algoritmo Babilónico](https://es.wikipedia.org/wiki/Cálculo_de_la_ra%C3%ADz_cuadrada) para el cálculo de esta última. 
+
+El desarrollo se ha realizado con el lenguaje [Javascript](https://www.javascript.com) sobre el IDE [Visual Studio Code](https://code.visualstudio.com) y como Framework para realizar los test hemos escogido [Jest](https://jestjs.io) ya que nos permite construir tests unitarios y matchers personalizados 
+
+La técnica escogido para las pruebas ha sido **TTD** (Test-Driven Development) ya que su estilo nos permite entremezclar codificación, pruebas y diseño mejorando así la calidad del código el cuál se comprueba automáticamente. Dado que TDD es una técnica de análisis y diseño hemos implementado primeto los tests de prueba, aplicando el patrón **A-A-A** (Arrange, Act, Assert), antes que la lógia del programa. 
+
+Como repositório para almacenar nuestro código hemos elegído [GitHub](https://github.com/chr1zS/Lab_TDD_BDD).
+
+<u>Bibliografía:</u>
+
+- Uso de git 
+
+  > Git. (2021). Retrieved 28 May 2021, from https://git-scm.com
+
+- Uso de GitHub (Uso de claves públicas y privadas)
+
+  > Agregar una clave SSH nueva a tu cuenta de GitHub - GitHub Docs. (2021). Retrieved 28 May 2021, from https://docs.github.com/es/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+- Problemas merge de ramas con git
+
+  > branch, f., Digulla, A., Digulla, A., & Digulla, A. (2021). fatal: The upstream branch of your current branch does not match the name of your current branch. Retrieved 28 May 2021, from https://stackoverflow.com/questions/24864700/fatal-the-upstream-branch-of-your-current-branch-does-not-match-the-name-of-you
+
+- Desarrollo de memoria Markdown con Typora
+
+  > Typora — a markdown editor, markdown reader. (2021). Retrieved 28 May 2021, from https://typora.io
+
+- Manual de JavaScript
+
+  > JavaScript | MDN. (2021). Retrieved 28 May 2021, from https://developer.mozilla.org/es/docs/Web/JavaScript
+
+  > Moderno, E. (2021). El Tutorial de JavaScript Moderno. Retrieved 26 May 2021, from https://es.javascript.info
+
+- Manual de Jest
+
+  > Jest · 🃏 Delightful JavaScript Testing. (2021). Retrieved 28 May 2021, from https://jestjs.io/es-ES/
+
+- Cáclulo de la raíz cuadrada
+
+  > Cálculo de la raíz cuadrada - Wikipedia, la enciclopedia libre. (2021). Retrieved 28 May 2021, from https://es.wikipedia.org/wiki/Cálculo_de_la_ra%C3%ADz_cuadrada
+
+- Generación de citas bibiográficas
+
+  > Ahorra Tiempo y Mejora tus Notas con Cite This for Me, la Herramienta Para Citaciones Automáticas Número 1. (2021). Retrieved 28 May 2021, from https://www.citethisforme.com/es
+
+
+
+
 
 ## 2. Código de Pruebas
 
@@ -550,7 +607,92 @@ Ran all test suites.
 
 
 
+
+
 ## 3. Código de la Aplicación
 
+### 3.1 Suma
 
+```javascript
+const suma = (a, b) => {
+    return a + b;
+}
+
+module.exports = suma;
+```
+
+
+
+### 3.2 Resta
+
+```javascript
+const resta = (a, b) => {
+    return a - b;
+}
+
+module.exports = resta;
+```
+
+
+
+### 3.3 Multiplicación
+
+```javascript
+const multiplicacion = (a, b) => {
+    return a * b;
+}
+
+module.exports = multiplicacion;
+```
+
+
+
+### 3.4 División
+
+```javascript
+const { ERROR } = require("jest-validate/build/utils");
+
+const division = (a, b) => {
+    if ( b != 0){
+        return a / b;
+    }
+    else{
+        return ERROR;
+    }
+}
+
+module.exports = division;
+```
+
+
+
+### 3.5 Raíz Cuadrada
+
+```javascript
+const { ERROR } = require("jest-validate/build/utils");
+const division = require("./division");
+const multiplicacion = require("./multiplicacion");
+const suma = require("./suma");
+
+const raiz_cuad = (a) => {
+    if ( a > 0){
+        var r = a;
+        var t = 0;
+
+        while ( t != r){
+            t = r;
+            r = multiplicacion(division(1, 2), suma(division(a, r), r));
+        }
+        return r;
+    }
+    else if (a == 0){
+        return 0;
+    }
+    else{
+        return ERROR;
+    }
+}
+
+module.exports = raiz_cuad;
+```
 
